@@ -1,10 +1,7 @@
 #include <math.h>
 #include "Complex.h"
 
-
-Complex::Complex(double _real) : real(_real), imag(0)
-{
-}
+#define PI 3.141592
 
 Complex::Complex(double _real, double _imag):real(_real), imag(_imag)
 {
@@ -13,7 +10,6 @@ Complex::Complex(double _real, double _imag):real(_real), imag(_imag)
 Complex::~Complex()
 {
 }
-
 
 double Complex::getAbs() const
 {
@@ -25,9 +21,9 @@ double Complex::getPhase() const
 	return atan2(imag, real);
 }
 
-double Complex::radTodeg() const
+double Complex::radToDeg(double _val) const
 {
-	return 0.0;
+	return (180 * _val)/PI;
 }
 
 Complex &Complex::operator=(const Complex &_val)

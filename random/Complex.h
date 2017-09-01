@@ -8,13 +8,14 @@ public:
 	double imag;
 
 public:
-	Complex(double _real);
-	Complex(double _real, double _imag);
+	//Complex() = default;
+	//Complex(double _real);
+	Complex(double _real = 0, double _imag = 0);
 	~Complex();
 
 	double getAbs() const;
 	double getPhase() const;
-	double radTodeg() const;
+	double radToDeg(double _val) const;
 	
 	bool operator==(const Complex &_val) const;
 	Complex &operator=(const Complex &_val);
