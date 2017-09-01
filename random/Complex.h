@@ -8,15 +8,20 @@ public:
 	double imag;
 
 public:
-	Complex(int _real, int _imag);
+	Complex(double _real);
+	Complex(double _real, double _imag);
 	~Complex();
 
-	double getReal() const;
-	double getImag() const;
-	double abs() const;
-	Complex &operator=(const Complex &_val);
+	double getAbs() const;
+	double getPhase() const;
+	double radTodeg() const;
+	
 	bool operator==(const Complex &_val) const;
-	Complex &operator*(const Complex &_val);
+	Complex &operator=(const Complex &_val);
+	const Complex operator*(const Complex &_val) const;
+	const Complex operator+(const Complex &_val) const;
+	const Complex operator-(const Complex &_val) const;
+	const Complex operator/(const Complex &_val) const;
 	Complex &operator*=(const Complex &_val);
 	Complex &operator/=(const Complex &_val);
 	Complex &operator+=(const Complex &_val);
