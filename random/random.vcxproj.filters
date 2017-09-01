@@ -27,6 +27,9 @@
     <ClInclude Include="Fir.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="FreqResponse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="random.cpp">
@@ -36,6 +39,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Fir.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FreqResponse.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

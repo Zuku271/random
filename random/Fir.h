@@ -6,8 +6,12 @@ template <unsigned int N>
 class Fir
 {
 public:
-	Fir(const std::array<const Complex, N> &_coeff);
-	~Fir();
+	Fir::Fir(const std::array<const Complex, N> &_coeff) : coeff(_coeff)
+	{
+	}
+	Fir::~Fir()
+	{
+	}
 private:
 	const std::array<const Complex, N> coeff;
 };

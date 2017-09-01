@@ -52,8 +52,6 @@ int main()
 	
 	Fir<N> ss(coeff);
 	
-	number3 = number1*number2 + number1/number3;
-
 	std::cout << coeff[3].real << "\tj" << coeff[3].imag << '\n';
 
 	system("PAUSE");

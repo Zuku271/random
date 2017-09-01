@@ -3,7 +3,7 @@
 
 #define PI 3.141592
 
-Complex::Complex(double _real, double _imag):real(_real), imag(_imag)
+Complex::Complex(double _real, double _imag) : real(_real), imag(_imag)
 {
 }
 
