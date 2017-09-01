@@ -48,10 +48,7 @@ bool Complex::operator==(const Complex &_val) const
 
 const Complex Complex::operator*(const Complex &_val) const
 {
-	const double temp = real;
-	const Complex ret(real * _val.real + imag * _val.imag, temp * _val.imag + imag * _val.real);
-	//real = real * _val.real + imag * _val.imag;
-	//imag = temp * _val.imag + imag * _val.real;
+	const Complex ret(real * _val.real - imag * _val.imag, real * _val.imag + imag * _val.real);
 
 	return ret;
 }
@@ -70,9 +67,9 @@ const Complex Complex::operator-(const Complex & _val) const
 
 const Complex Complex::operator/(const Complex & _val) const
 {
-	const double temp = real;
 	const double denominator = _val.real*_val.real + _val.imag*_val.imag;
-	const Complex ret((real*_val.real + imag*_val.imag) / denominator, (imag*_val.real - temp*_val.imag) / denominator);
+	const Complex ret((real*_val.real + imag*_val.imag) / denominator,
+		(imag*_val.real - real*_val.imag) / denominator);
 
 	return ret;
 }
