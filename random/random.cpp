@@ -2,6 +2,7 @@
 //
 #include <iostream>
 #include <string>
+#include <vector>
 #include "Complex.h"
 #include "Fir.h"
 #include "FreqResponse.h"
@@ -51,12 +52,12 @@ int main()
 		0.0010	,
 		- 0.0000
 	};
-	
+	const std::vector<double> signal(100, 0.0);
 	Fir<N> filter(coeff);
-//	FreqResponse<N> filterResponse();
-
+	FreqResponse filterResponse = filter * signal;
 	
-	std::cout << coeff[3].real << "\tj" << coeff[3].imag << '\n';
+	
+	std::cout << filter.getCoeff().at(3).real << "\tj" << filter.getCoeff().at(3).imag << '\n';
 
 	system("PAUSE");
     return 0;

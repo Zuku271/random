@@ -1,24 +1,14 @@
 #pragma once
 #include <array>
+#include "Complex.h"
 
-template <unsigned int L>
 class FreqResponse
 {
 public:
-	FreqResponse(const std::array<const Complex, L> _FreqPoints);
+	FreqResponse(const std::array<const Complex, 100>& _FreqPoints);
 	~FreqResponse();
 
 
 private:
-	const std::array<const Complex, L> FreqPoints;
+	const std::array<const Complex, 100> FreqPoints;
 };
-
-template <unsigned int L>
-FreqResponse<L>::FreqResponse(const std::array<const Complex, L> _FreqPoints) : FreqPoints(_FreqPoints)
-{
-}
-
-template <unsigned int L>
-FreqResponse<L>::~FreqResponse()
-{
-}
