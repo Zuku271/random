@@ -4,6 +4,8 @@
 #include <string>
 #include "Complex.h"
 #include "Fir.h"
+#include "FreqResponse.h"
+
 
 int main()
 {
@@ -50,7 +52,9 @@ int main()
 		- 0.0000
 	};
 	
-	Fir<N> ss(coeff);
+	Fir<N> filter(coeff);
+//	FreqResponse<N> filterResponse();
+
 	
 	std::cout << coeff[3].real << "\tj" << coeff[3].imag << '\n';
 
