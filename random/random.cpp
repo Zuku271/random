@@ -52,12 +52,15 @@ int main()
 		0.0010	,
 		- 0.0000
 	};
-	const std::vector<double> signal(100, 0.0);
+	const std::vector<double> signal(100, 1.0);
 	Fir<N> filter(coeff);
 	FreqResponse filterResponse = filter * signal;
 	
-	
-	std::cout << filter.getCoeff().at(3).real << "\tj" << filter.getCoeff().at(3).imag << '\n';
+
+	for (int i = 0; i < 100; ++i)
+	{
+		std::cout << filterResponse.getFreqPoints().at(i).real << "\tj" << filterResponse.getFreqPoints().at(i).imag << '\n';
+	}
 
 	system("PAUSE");
     return 0;

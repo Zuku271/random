@@ -5,10 +5,11 @@
 class FreqResponse
 {
 public:
-	FreqResponse(const std::array<const Complex, 100>& _FreqPoints);
+	FreqResponse(const std::array<Complex, 100>& _FreqPoints);
 	~FreqResponse();
 
+	const std::array<Complex, 100>& getFreqPoints() const;
 
 private:
-	const std::array<const Complex, 100> FreqPoints;
+	const std::array<Complex, 100> FreqPoints;
 };

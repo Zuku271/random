@@ -20,6 +20,7 @@ public:
 	bool operator==(const Complex &_val) const;
 	Complex &operator=(const Complex &_val);
 	const Complex operator*(const Complex &_val) const;
+	const Complex operator*(const double &_val) const;
 	const Complex operator+(const Complex &_val) const;
 	const Complex operator-(const Complex &_val) const;
 	const Complex operator/(const Complex &_val) const;

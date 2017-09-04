@@ -23,19 +23,15 @@ public:
 	FreqResponse  &operator*(const std::vector<double>& _signal)
 	{
 		const size_t size = 100;
-		std::array<Complex, size> response({});
+		std::array<Complex, size> response({0.0, 0.0});
 		
 		for (size_t i = 0; i < size; ++i)
 		{
-			response[i] = [&]()
+			for (size_t j = 0; j < N; ++j)
 			{
-				Complex tmp = 0;
-				for (size_t j = 0; j < N; ++j)
-				{
-					tmp += this->coeff[j] * _signal[size - 1 - j];
-				}
-				return tmp;
-			};
+				response[i] += this->coeff[j] * _signal[size - 1 - j];
+				//std::cout << response.at(i).real << '\t' << response.at(i).imag << '\n';
+			}
 		}
 
 		FreqResponse *Response = new FreqResponse(response);

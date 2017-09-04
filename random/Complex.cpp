@@ -49,6 +49,12 @@ const Complex Complex::operator*(const Complex &_val) const
 	return ret;
 }
 
+const Complex Complex::operator*(const double &_val) const
+{
+	const Complex ret(real * _val, imag*_val);
+	return ret;
+}
+
 const Complex Complex::operator+(const Complex & _val) const
 {
 	const Complex ret(real+_val.real, imag+_val.imag);
