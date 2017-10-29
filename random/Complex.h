@@ -11,6 +11,7 @@ public:
 	//Complex() = default;
 	//Complex(double _real);
 	Complex(double _real = 0, double _imag = 0);
+	Complex(const Complex& _copy);
 	~Complex();
 
 	double getAbs() const;

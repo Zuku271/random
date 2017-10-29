@@ -1,10 +1,16 @@
 #include <math.h>
+#include <iostream>
 #include "Complex.h"
 
 #define PI 3.141592
 
 Complex::Complex(double _real, double _imag) : real(_real), imag(_imag)
 {
+}
+
+Complex::Complex(const Complex & _copy) : real(_copy.real), imag(_copy.imag)
+{
+	std::cout << "Kopiowanie complex" << '\n';
 }
 
 Complex::~Complex()

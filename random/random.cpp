@@ -6,6 +6,7 @@
 #include "Complex.h"
 #include "Fir.h"
 #include "FreqResponse.h"
+#include "IntToBin.h"
 
 
 int main()
@@ -14,7 +15,7 @@ int main()
 	Complex number2(1, 5);
 	Complex number3(8, 1);
 	const unsigned int N = 41;
-
+	/*
 	const std::array<const Complex, N> coeff =
 	{
 		-0.0000	, 0.0010 ,0.0007 , -0.0031, - 0.0030, 0.0048, 0.0072, - 0.0051,
@@ -61,7 +62,18 @@ int main()
 	{
 		std::cout << filterResponse.getFreqPoints().at(i).real << "\tj" << filterResponse.getFreqPoints().at(i).imag << '\n';
 	}
+	*/
 
+
+	int a = 10;
+
+	std::vector<char> tmp;
+	IntToBin(a, tmp);
+	
+	for (int i = 0; i < tmp.size(); ++i)
+	{
+		std::cout << tmp.at(i) + 0x30 << '\n';
+	}
 	system("PAUSE");
     return 0;
 }

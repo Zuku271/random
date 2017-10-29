@@ -150,12 +150,14 @@
     <ClInclude Include="Complex.h" />
     <ClInclude Include="Fir.h" />
     <ClInclude Include="FreqResponse.h" />
+    <ClInclude Include="IntToBin.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Complex.cpp" />
     <ClCompile Include="Fir.cpp" />
     <ClCompile Include="FreqResponse.cpp" />
+    <ClCompile Include="IntToBin.cpp" />
     <ClCompile Include="random.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
